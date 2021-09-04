@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+      body {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+		font-family: 'Open Sans', sans-serif;
+        background: rgba(105, 255, 117, 1);
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+      }
+      #container {
+        width: 600px !important;
+        height: 500px !important;
+        position: relative;
+      }
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        outline: none;
+        object-fit: cover;
+      }
+	  .title{
+		  color: #129439;
+		  font-size: 4rem;
+		}
+		p{
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: #129439;
+		  margin-top: -1rem;
+	  }
+	  a{
+		  color: #251616;
+		  text-decoration: none;
+	  }
+    </style>
+    <title>Spotify Icon - Copy</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://spline.design/_assets/_images/icon_favicon16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://spline.design/_assets/_images/icon_favicon32x32.png"
+      sizes="32x32"
+    />
+  </head>
+  <body>
+
+    <div id="container">
+      <canvas id="canvas3d"></canvas>
+    </div>
+
+	<h1 class="title">Look who's made 3D on web easier</h1>
+	<p>Click 
+		<a href="https://spline.design/" target="_blank">here</a>
+		to find out</p>
+
+    <script src="https://unpkg.com/three@^0.131.0/build/three.min.js"></script>
+    <script src="runtime.js"></script>
+    <script>
+      const app = new SpeRuntime.Application();
+      app.start("./scene.json");
+    </script>
+
+  </body>
+</html>
